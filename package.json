@@ -21,6 +21,10 @@
     "@angular/router": "~11.1.1",
     "devextreme": "20.2.5",
     "devextreme-angular": "20.2.5",
+    "@devexpress/analytics-core": "20.2.5",
+    "devexpress-dashboard": "20.2.5",
+    "devexpress-dashboard-angular": "20.2.5",
+    "devexpress-richedit": "20.2.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
