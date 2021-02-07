@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Как добавить DevExtreme в существующее ангуляр приложение читаем тут:
+[Add DevExtreme to an Angular CLI Application](https://js.devexpress.com/DevExtreme/Guide/Angular_Components/Getting_Started/Add_DevExtreme_to_an_Angular_CLI_Application/)
+
+
+## Версия Node.js
+Сборку этого проекта делал на ноде 14-й версии. Возможно и на 13-й версии тоже будет нормально собираться.
