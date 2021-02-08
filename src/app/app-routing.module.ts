@@ -6,10 +6,10 @@ import { ExampleDashboardComponent } from './pages/example-dashboard/example-das
 import { ExampleDevextremeComponent } from './pages/example-devextreme/example-devextreme.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'dashboard', component: ExampleDashboardComponent },
   { path: 'devextreme', component: ExampleDevextremeComponent },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
