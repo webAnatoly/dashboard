@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Employee, EmployeesService } from './employees.service';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +6,8 @@ import { Employee, EmployeesService } from './employees.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  employees: Employee[] = [];
   title = 'my-third-dashboard';
 
-  constructor(service: EmployeesService) {
-    this.employees = service.getEmployees();
-  }
+  constructor() { }
 
-  helloWorld(): void {
-    alert('Hello world!');
-  }
 }

@@ -1,11 +1,6 @@
-<h1>Знакомство с devextreme, devextreme-angular</h1>
+<app-nav></app-nav>
+<router-outlet></router-outlet>
 
-<dx-button
-  text="Click me!"
-  (onClick)="helloWorld()">
-</dx-button>
+<h2><a routerLink="/devextreme">Пример использования DevExtreme компонентов</a></h2>
 
-<dx-data-grid
-  [dataSource]="employees"
-  keyExpr="EmployeeID">
-</dx-data-grid>
+<h2><a routerLink="/dashboard">Пример c Dashboard</a></h2>

@@ -5,10 +5,16 @@ import { DxDashboardControlModule } from 'devexpress-dashboard-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavComponent } from './layouts/nav/nav.component';
+import { ExampleDashboardComponent } from './pages/example-dashboard/example-dashboard.component';
+import { ExampleDevextremeComponent } from './pages/example-devextreme/example-devextreme.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    ExampleDashboardComponent,
+    ExampleDevextremeComponent
   ],
   imports: [
     BrowserModule,
