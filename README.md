@@ -32,3 +32,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Версия Node.js
 Сборку этого проекта делал на ноде 14-й версии. Возможно и на 13-й версии тоже будет нормально собираться.
+
+## Приложение задеплоино на firebase
+[Hosting URL](https://angular-dashboard-8a001.web.app)
