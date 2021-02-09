@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { ViewerApiExtension } from 'devexpress-dashboard';
 
 @Component({
   selector: 'app-example-dashboard',
@@ -14,6 +15,15 @@ export class ExampleDashboardComponent implements OnInit {
 
   onDashboardInit(e: any): void {
     console.log('Dashboard initialized', e);
+    const dashboardControl = e.component;
+    const viewerApiExtension = dashboardControl.findExtension('viewerApi');
+    if (viewerApiExtension) {
+      console.log('found extension !!!!');
+      viewerApiExtension.on('itemWidgetCreated', (args: any) => this.onItemWidgetCreated(args));
+      // https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension
+    } else {
+      console.log('not found extension');
+    }
   }
 
   onBeforeRender(e: any): void {
@@ -27,8 +37,8 @@ export class ExampleDashboardComponent implements OnInit {
     // }
   }
 
-  onItemWidgetCreated(item: any): void {
-    console.log('onItemWidgetCreated');
+  onItemWidgetCreated(args: any): void {
+    console.log('onItemWidgetCreated', args.itemName);
   }
 
 }
