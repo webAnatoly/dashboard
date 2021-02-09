@@ -1,6 +1,14 @@
 <h1>Dashboard в режиме редактирования</h1>
 <dx-dashboard-control
   style="display: block;width:100%;height:800px;"
+  workingMode='Viewer'
   endpoint="https://demos.devexpress.com/services/dashboard/api"
+  (onBeforeRender) = "onBeforeRender($event)"
+  (onDashboardInitialized) = "onDashboardInit($event)"
 >
+  <dxo-extensions>
+    <dxo-viewer-api>
+      [onItemWidgetCreated] = "onItemWidgetCreated"
+    </dxo-viewer-api>
+  </dxo-extensions>
 </dx-dashboard-control>
