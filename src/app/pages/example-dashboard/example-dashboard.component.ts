@@ -18,11 +18,9 @@ export class ExampleDashboardComponent implements OnInit {
     const dashboardControl = e.component;
     const viewerApiExtension = dashboardControl.findExtension('viewerApi');
     if (viewerApiExtension) {
-      console.log('found extension !!!!');
-      viewerApiExtension.on('itemWidgetCreated', (args: any) => this.onItemWidgetCreated(args));
       // https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension
-    } else {
-      console.log('not found extension');
+      viewerApiExtension.on('itemWidgetCreated', (args: any) => this.onItemWidgetCreated(args));
+      viewerApiExtension.on('itemWidgetOptionsPrepared', (args: any) => this.onItemWidgetOptionsPrepared(args));
     }
   }
 
@@ -37,8 +35,73 @@ export class ExampleDashboardComponent implements OnInit {
     // }
   }
 
+  onItemWidgetOptionsPrepared(args: any): void {
+    console.log('onItemWidgetOptionsPrepared');
+    // how to work with the obtained widget see here
+    // https://js.devexpress.com/DevExtreme/Guide/jQuery_Components/Component_Configuration_Syntax/
+  }
+
   onItemWidgetCreated(args: any): void {
-    console.log('onItemWidgetCreated', args.itemName);
+    const currentWidget = args.getWidget ? args.getWidget() : null;
+    if (currentWidget) {
+      this.customizeWidgets(args, 'onItemWidgetCreated');
+    }
+  }
+
+  onItemWidgetUpdating(args: any): void {
+    const currentWidget = args.getWidget ? args.getWidget() : null;
+    if (currentWidget) {
+      this.customizeWidgets(args, 'onItemWidgetUpdating');
+    }
+  }
+
+  onItemWidgetUpdated(args: any): void {
+    const currentWidget = args.getWidget ? args.getWidget() : null;
+    if (currentWidget) {
+      this.customizeWidgets(args, 'onItemWidgetUpdated');
+    }
+  }
+
+  customizeWidgets(args: any, eventName: string): void {
+
+    console.log('Event name: ', eventName + '\n' + 'Widget name: ', args.itemName);
+
+    if (args.itemName === 'gridSalesByState') {
+      console.log('works!!!!!!!!!!!');
+      const grid = args.GetWidget();
+      grid.option({
+        hoverStateEnabled: true
+      });
+    }
+    if (args.itemName === 'chartSalesByCategory') {
+      const chart = args.getWidget();
+      console.log('works2!!!!!!!!! chart', chart);
+      chart.option({
+        tooltip: {
+          enabled: false,
+        },
+        title: {
+          text: 'Удалось задать заголовок',
+          subtitle: {
+            text: 'Удалось задать подзаголовок'
+          }
+        },
+        onArgumentAxisClick: (info: any) => {
+          info.component.getAllSeries()[0].getPointsByArg(info.argument)[0].showTooltip();
+        }
+      });
+    }
+    if (args.itemName === 'pieDashboardItem1') {
+      const pie = args.GetWidget()[0];
+      pie.option({
+        legend: {
+          visible: true,
+          border: {
+            visible: true
+          }
+        }
+      });
+    }
   }
 
 }
