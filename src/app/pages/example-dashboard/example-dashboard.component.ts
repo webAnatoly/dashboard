@@ -24,7 +24,7 @@ export class ExampleDashboardComponent implements OnInit {
     }
   }
 
-  onBeforeRender(e: any): void {
+  onDashboardBeforeRender(e: any): void {
     // const dashboardControl = e.component;
     // dashboardControl.registerExtension(new ViewerApiExtension(dashboardControl));
     // console.log('extensions', dashboardControl.extensions);
