@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { ViewerApiExtension } from 'devexpress-dashboard';
 
 @Component({
   selector: 'app-example-dashboard',
