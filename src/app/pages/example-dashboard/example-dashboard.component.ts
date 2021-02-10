@@ -19,6 +19,8 @@ export class ExampleDashboardComponent implements OnInit {
     if (viewerApiExtension) {
       // https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension
       viewerApiExtension.on('itemWidgetCreated', (args: any) => this.onItemWidgetCreated(args));
+      viewerApiExtension.on('itemWidgetUpdated', (args: any) => this.onItemWidgetUpdated(args));
+      viewerApiExtension.on('itemWidgetUpdating', (args: any) => this.onItemWidgetUpdating(args));
       viewerApiExtension.on('itemWidgetOptionsPrepared', (args: any) => this.onItemWidgetOptionsPrepared(args));
     }
   }
