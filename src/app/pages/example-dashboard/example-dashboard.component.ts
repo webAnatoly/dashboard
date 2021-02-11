@@ -69,7 +69,7 @@ export class ExampleDashboardComponent implements OnInit {
 
     if (args.itemName === 'gridSalesByState') {
       console.log('works!!!!!!!!!!!');
-      const grid = args.GetWidget();
+      const grid = args.getWidget();
       grid.option({
         hoverStateEnabled: true
       });

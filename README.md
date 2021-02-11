@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Как добавить DevExtreme в существующее ангуляр приложение читаем тут:
 [Add DevExtreme to an Angular CLI Application](https://js.devexpress.com/DevExtreme/Guide/Angular_Components/Getting_Started/Add_DevExtreme_to_an_Angular_CLI_Application/)
 
+## Рабочий демо-пример Dashboard с репозитория DevExpress
+https://github.com/DevExpress/web-dashboard-demo
 
 ## Версия Node.js
 Сборку этого проекта делал на ноде 14-й версии. Возможно и на 13-й версии тоже будет нормально собираться.
