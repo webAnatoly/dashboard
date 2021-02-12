@@ -31,7 +31,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/assets/themes_styles/light.scss",
+                "bundleName": "theme-light",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes_styles/dark.scss",
+                "bundleName": "theme-dark",
+                "inject": false
+              }
             ],
             "allowedCommonJsDependencies": [
               "devextreme", "devexpress-dashboard"
