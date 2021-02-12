@@ -22,6 +22,8 @@ export class LazyLoadService {
   private static themeNames: SimpleObject[] = [
     { value: 'theme-light', name: 'Светлая тема' },
     { value: 'theme-dark', name: 'Темная тема' },
+    { value: 'theme-greenmist', name: 'Зеленый туман' },
+    { value: 'theme-darkmoon', name: 'Лунная ночь' },
   ];
 
   static getThemeNames(): SimpleObject[] {

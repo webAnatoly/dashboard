@@ -41,6 +41,16 @@
                 "input": "src/assets/themes_styles/dark.scss",
                 "bundleName": "theme-dark",
                 "inject": false
+              },
+              {
+                "input": "src/assets/themes_styles/greenmist.scss",
+                "bundleName": "theme-greenmist",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes_styles/darkmoon.scss",
+                "bundleName": "theme-darkmoon",
+                "inject": false
               }
             ],
             "allowedCommonJsDependencies": [
