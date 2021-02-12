@@ -1,5 +1,17 @@
 <nav>
-  <a routerLink="/">Домой</a>
+  <a routerLink="/home">Домой</a>
   <a routerLink="/dashboard">Дашбоард</a>
   <a routerLink="/devextreme">Девэкстрим компоненты</a>
+  <div class="dx-field">
+    <dx-drop-down-button
+      text="Переключить тему"
+      [dropDownOptions]="{ width: '100%' }"
+      icon="toolbox"
+      [items]="themeNames"
+      displayExpr="name"
+      keyExpr="id"
+      (onItemClick)="onThemeNameClick($event)"
+    ></dx-drop-down-button>
+  </div>
+
 </nav>
